@@ -28,10 +28,10 @@ pytest.ini # If you have local test configuration you don't want to commit
 .DS_Store                # macOS specific
 Thumbs.db                # Windows specific
 
-# Environment variables
-.env
-.env.*
-!.env.example            # You might want to commit an example .env file without values
+# # Environment variables
+# .env
+# .env.*
+# !.env.example            # You might want to commit an example .env file without values
 
 # Database files
 *.sqlite3
