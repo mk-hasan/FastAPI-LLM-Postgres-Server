@@ -113,18 +113,32 @@ POSTGRES_USER="local_user"
 POSTGRES_PASSWORD="local_password"
 POSTGRES_SERVER="localhost"
 POSTGRES_PORT="5432"
-POSTGRES_DB="craidb"
+POSTGRES_DB="ai_db"
 ```
 
 ### 6. Database Setup & Migrations
 
 Create database and user:
 
+You can quickly start a PostgreSQL database using Docker Compose:
+
+```bash
+docker-compose up -d postgres
+```
+
+This will start the PostgreSQL service defined in your `docker-compose.yaml`. Make sure your environment variables in `.env` match the credentials above.
+
+---
+Alternatively you can install postgres and execute this command
 ```sql
-CREATE DATABASE craidb;
+CREATE DATABASE ai_db;
 CREATE USER local_user WITH PASSWORD 'local_password';
 GRANT ALL PRIVILEGES ON DATABASE craidb TO local_user;
 ```
+
+---
+
+
 
 Clean Alembic State:
 
