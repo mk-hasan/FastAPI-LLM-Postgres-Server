@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+build/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+*.egg-info/
+.pytest_cache/
+.coverage
+.mypy_cache/
+.dmypy.json
+pytest.ini # If you have local test configuration you don't want to commit
+.ruff_cache/ # If you use Ruff linter/formatter
+
+# Editor-specific files
+.idea/                   # IntelliJ/PyCharm
+.vscode/                 # VS Code
+*.sublime-project
+*.sublime-workspace
+.DS_Store                # macOS specific
+Thumbs.db                # Windows specific
+
+# Environment variables
+.env
+.env.*
+!.env.example            # You might want to commit an example .env file without values
+
+# Database files
+*.sqlite3
+*.db
+/data/                   # Common directory for local DB files (e.g., SQLite)
+alembic.ini              # Alembic config itself is often committed, but generated files below
+migrations/versions/*.pyc # Compiled migration files
+# If you don't want to commit migration scripts, uncomment the next line:
+# migrations/versions/
+
+# Logs
+*.log
+logs/                    # Common directory for log
+
+.DS_Store
+../.DS_Store
+app/.DS_Store
